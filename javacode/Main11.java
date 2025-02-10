@@ -7,10 +7,13 @@ public class Main11 {
 		int pricePerBottle = 10;
 		// 要買的瓶數
 		int bottlesToBuy = 11;
-		// 買一送一 (實際上只要支付一半的價格)
-		int bottlesToPayFor = bottlesToBuy / 2; // 實際上需要支付的瓶數
-		// 計算總花費 (每瓶飲料價格 * 實際上需要支付的瓶數)
-		int totalCost = pricePerBottle * bottlesToPayFor;
+		// 買一送一 (計算買一送一個組合數量)
+		int fullSets = bottlesToBuy / 2; // 每組 2 瓶, 可買幾組
+		int remainingBottoles = bottlesToBuy % 2; // 剩餘的瓶數
+
+		// 計算總花費 (每瓶飲料價格 * (組數 + 餘瓶))
+		int totalCost = pricePerBottle * (fullSets + remainingBottoles);
+		System.out.printf("要買的瓶數 $%d%n", bottlesToBuy);
 		System.out.printf("總花費 $%d%n", totalCost);
 
 	}
