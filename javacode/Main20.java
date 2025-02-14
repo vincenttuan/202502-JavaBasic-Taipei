@@ -11,6 +11,10 @@ public class Main20 {
 		int tmp = 30; // 房間溫度
 		boolean hasPerson = true; // 房間是否有人?
 
+		System.out.printf("光線強度 %d Lux%n", lux);
+		System.out.printf("房間溫度 %d °C%n", tmp);
+		System.out.printf("是否有人 %b %n", hasPerson);
+
 		// 控制燈光
 		boolean light = (lux < 100) && (hasPerson == true);
 		if(light == true) {
