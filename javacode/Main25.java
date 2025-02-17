@@ -27,7 +27,7 @@ public class Main25 {
 		}
 
 		// bmi 診斷狀態利用三元運算子嵌套寫出
-		String result = (bmi <= 18)?"過輕"?(bmi > 23)?"過重":"正常";
+		String result = (bmi <= 18)?"過輕":(bmi > 23)?"過重":"正常";
 		System.out.printf("診斷: %s%n", result);
 	}
 }
